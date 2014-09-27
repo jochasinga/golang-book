@@ -12,6 +12,11 @@ func (c *Circle) area() float64 {
 	return math.Pi * c.r * c.r
 }
 
+// perimater() method for Circle
+func (c *Circle) perimeter() float64 {
+	return math.Pi * (c.r * 2)
+}
+
 type Rectangle struct {
 	x1, y1, x2, y2 float64
 }
@@ -28,6 +33,12 @@ func (r *Rectangle) area() float64 {
 	l := distance(r.x1, r.y1, r.x1, r.y2)
 	w := distance(r.x1, r.y1, r.x2, r.y1)
 	return l * w
+}
+
+func (r *Rectangle) perimeter() float64 {
+	l := distance(r.x1, r.y1, r.x1, r.y2)
+	w := distance(r.x1, r.y1, r.x2, r.y1)
+	return l*2 + w*2
 }
 
 // Shape interface
@@ -49,4 +60,6 @@ func main() {
 	r := Rectangle{0, 0, 10, 10}
 	c := Circle{0, 0, 5}
 	fmt.Println(totalArea(&c, &r))
+	fmt.Println(r.perimeter())
+	fmt.Println(c.perimeter())
 }
