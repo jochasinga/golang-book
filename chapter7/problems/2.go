@@ -10,17 +10,17 @@ package main
 import "fmt"
 
 func main() {
-     fmt.Println(half(255))
+	fmt.Println(half(255))
 }
 
 func half(num int) (int, bool) {
-     halfling := num / 2
-     even := false
+	halfling := num / 2
+	even := false
 
-     if halfling % 2 == 0 {
-     	even = true
-     } else {
-        even = false
-     }
-     return halfling, even
+	if halfling%2 == 0 {
+		even = true
+	} else {
+		even = false
+	}
+	return halfling, even
 }

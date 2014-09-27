@@ -5,12 +5,12 @@ package main
 import "fmt"
 
 func one(xPtr *int) {
-     *xPtr = 1
+	*xPtr = 1
 }
 
 func main() {
-     // this is a pointer
-     xPtr := new(int)
-     one(xPtr)
-     fmt.Println(*xPtr)		// x is 1
+	// this is a pointer
+	xPtr := new(int)
+	one(xPtr)
+	fmt.Println(*xPtr) // x is 1
 }

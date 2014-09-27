@@ -7,16 +7,16 @@ package main
 import "fmt"
 
 func main() {
-     arr := []int{1, 2, 3, 4, 5}
-     fmt.Println(greatest(arr...))
+	arr := []int{1, 2, 3, 4, 5}
+	fmt.Println(greatest(arr...))
 }
 
 func greatest(args ...int) int {
-     greatest := args[0]
-     for v := 1; v <= len(args); v++ {
-     	 if v > greatest {
-	   greatest = v
-	 }
-     }
-     return greatest
+	greatest := args[0]
+	for v := 1; v <= len(args); v++ {
+		if v > greatest {
+			greatest = v
+		}
+	}
+	return greatest
 }

@@ -7,5 +7,5 @@ package main
 import "os"
 
 func main() {
-     Exit()
+	Exit()
 }
